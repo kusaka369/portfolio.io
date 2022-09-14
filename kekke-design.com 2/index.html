@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keisuke Kusakaのポートフォリオサイト</title>
+    <meta name="description" content="2021年2月から職業訓練校に通い初めて制作に取り組んできた作品を掲載しています。ご興味を持っていただければ幸いです。">
+    <!-- favicon -->
+    <link rel="icon" href="images/icon.ico" id="favicon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="google-site-verification" content="F6orCwXv0A_R2sRANs1DtwH3Qb2secexw6Xw5IufSSM" />
+</head>
+<body>
+
+    <!-- ---------------------------------------------------------------------
+    ------------------------ローディングアニメーション----------------------------
+    -------------------------------------------------------------------------- -->
+
+
+    <div id="splash">
+        <div id="splash_logo">
+            <!-- ベースにするsvgタグを入れる。記述の一部を後程解説する自作のsvgタグと差し替えます。-->
+            <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="746.7px" height="94.7px" viewBox="0 0 746.7 94.7" style="enable-background:new 0 0 746.7 94.7;" xml:space="preserve">
+            <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/logo3.svg" width="746.7px" height="94.7px" mask="url(#clipmask)"></image>
+            <mask id="clipmask" maskUnits="objectBoundingBox">
+            <path class="st0" d="M44.2,42.8c0,0-3.6-6.4-12-6.1c-8.3,0.3-7.5,10.8-7.5,10.8s0.8,6.5,15.7,8.9C55.3,58.8,61.7,54,61.7,54
+            S74.8,43.9,71,39.9C67.1,35.9,55.1,54,55.1,54L40.4,80.3c0,0-11.7,14.9-19.2,14.4S6.6,93.4,7.2,82.9s-26.8-59.8,21.8-69.7
+            s66.4,20,67.8,23.5s-2.9,4.6-2.9,4.6L86.6,41c0,0-15.2,22.4-22.7,24.2s-13,5.2-13,5.2s-16,1.1-13.9-3.3c2.1-4.4,13.5,0.8,13.5,0.8
+            s7,15.2,12,16.1s19.3-5.2,19.3-5.2l16.5-6.5v6.9c0,0,14.7-3.5,14.7-11.4s-11.1,4.5-11.1,4.5s-6.5,7.7-1.5,11.4
+            c5,3.7,14,1.8,19.3-0.3S149.5,69,149.5,69h4.9l-8.6,11.3l2,5.1l6.6,1.3l38.9-18.9c0,0,8.4-2.3,5.3-8.3s-7.8,5.8-7.8,5.8l1.5,15.7
+            c0,0-0.5,8.2-7.2,9.1c-6.6,0.8-6.2-2.9-6.2-2.9l6.8-3l15.2-0.5l38.6-15.7l-6.7,15.9l3.4,3.1L257.3,69l-1.1,7.3l-0.8,2.6l4.7,3.7
+            l10.1,0.2c0,0,46.5-19.9,47.7-38.1c1.1-18.2-31.9,34.7-30.3,41.4c1.6,6.7,4.9-2.7,4.9-2.7l20.1-17.8l3.1,2.3l-1.7,4.4l-9.8,6.9
+            c0,0,6.5,7.7,20.6,2.7c14-5,19.9-9.6,19.9-9.6v6.3c0,0,14.9-4.8,15.4-12.4c0.5-7.7-13.1,6.1-13.1,6.1l-2,10.3l4.5,2.8
+            c0,0,13.2,1.5,23.2-6.9s38.2-74.7,59.9-58.3c21.8,16.4,10.1,21.3,10.1,21.3l-8.2-3.1c0,0-9-2.8-11.9,3.1s3.3,11.4,3.3,11.4
+            s18,6.3,26.2,3.3c8.2-3,16.5-9.4,16.2-15.3c-0.3-5.9-14.4,9.9-14.4,9.9s-17.5,35.5-22.4,36.7s-6.4,7.8-16.7,6.1
+            c-10.3-1.7-11.3-12.3-11.3-12.3s49-62.7,72.4-57.6S500,29,500,36.7s-6.8,4.3-6.8,4.3l-3.6-0.5c0,0-7.5,0.6-10.5,7.1
+            c-3,6.5-22,23.3-28.5,22.7c-6.6-0.6-14.4,3.2-16.2-2.3s9.3-2,9.3-2l14,17.3l10.7,2.3l36.2-17.7l2.8,1.3l-6.7,12.5l-0.3,4l5.7-1.2
+            l17.7-14.9l3.9,1.6l-4.7,5.9l2.5,5.2l10.4,1.3l30.2-14.8c0,0,9.1-7.1,3.4-10.5c-5.7-3.4-7.6,9.8-7.6,9.8l3.2,11.1l-1.5,6.5
+            c0,0-3.4,9.2-11.5,3s19.3-6,19.3-6s23.7-5.6,31.6-10.5c7.9-5,20.2-9.5,19.8-5.9c-0.3,3.6-1,7.7-1,7.7s-4.1-6.1-12.4-2
+            c-8.3,4.1-11,10.7-11,10.7l-1.4,3.1h5.6c0,0,11.2-7.7,11.7-9.1c0.5-1.4,3.7-1.1,3.7-1.1l-2.6,7.3l6.2,3.5c0,0,34.4-13.8,40-18.2
+            c5.6-4.4,20.7-15.1,18.9-24.7s-20.5,21.5-20.5,21.5s-7.4,16.5-7.3,19.3s22.6-17.8,22.6-17.8s5.3-0.6,3.6,2.8
+            c-1.7,3.4-7.5,8.5-11.2,9.6c-3.6,1.1,5.3,3.7,5.3,3.7s30.1-5.7,38.8-11c8.7-5.3,14.1-7.4,15.6-5.5c1.6,1.9,4.2,3.6,4.2,3.6l-3.4,3.3
+            l-4.5-3.6L710,74.5l-4.7,6.4l-0.3,4.5h3.6l6.9-4.9l4.6-4.4h2.4l-0.6,5.7l2.8,2l9.5,1.7l12.5-6.9l-8-60.2L543.5,0L228.9,9.5
+            l-56.1,32.1l-12,10.2"/>
+            </mask>
+            </svg><!--ベースにするタグここまで-->
+            <!--/splash_logo-->
+        </div>
+        <!--/splash-->
+    </div>
+
+
+
+    
+    <!-- --------------------------------------------------------------------------
+    -------------------------------ヘッダー-----------------------------------------
+    --------------------------------------------------------------------------- -->
+    
+    
+    <header id="header">
+        <div class="flex">
+            <!-- バーガーボタン -->
+            <div class="burger-btn">
+                <span class="bar bar-top"></span>
+                <span class="bar bar-middle"></span>
+                <span class="bar bar-bottom"></span>
+            </div>
+            <!-- バーガーボタン -->
+            
+            <!-- ナビゲーションメニュー -->
+            <nav id="nav">
+                <ul class="nav-list">
+                    <li class="nav-item nav-item1"><a href="#visual">Top</a></li>
+                    <li class="nav-item nav-item3"><a href="#link-works">Works</a></li>
+                    <li class="nav-item nav-item2"><a href="#link-about">About</a></li>
+                    <li class="nav-item nav-item4"><a href="#link-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- ナビゲーションメニュー -->
+            
+            <!-- music on/off スイッチ -->
+            <div class="play-btn music on">
+                <img src="images/mute-icon.png" alt="再生ボタン" class="play-icon" loading="lazy">
+            </div>
+            <!-- music on/off スイッチ -->
+        </div>
+
+        <!-- バーガーメニュー -->
+        <div class="burger-menu">
+            <ul class="burger-list">
+                <li class="burger-item"><a href="#visual">Top</a></li>
+                <li class="burger-item"><a href="#link-works">Works</a></li>
+                <li class="burger-item"><a href="#link-about">About</a></li>
+                <li class="burger-item"><a href="#link-contact">Contact</a></li>
+            </ul>
+        </div>
+        <!-- バーガーメニュー -->
+    </header>
+
+    <main>
+        <!-- ---------------------------------------------------------------------------
+        --------------------------------MV----------------------------------------------
+        --------------------------------------------------------------------------- -->
+        <div id="visual">
+            <h1><img src="images/main-logo5.png" alt="keisuke kusaka"></h1>
+            <div class="movie">
+                <video loop autoplay playsinline muted>
+                    <source src="movie/Sea - 4006_3_3.mp4" type="video/mp4">
+                    <source src="movie/Sea - 4006_3_4.webm" type="video/webm">
+                </video>
+            </div>
+        </div>
+        <div class="scrolldown2"><span>Scroll</span></div>
+
+        <!-- ---------------------------------------------------------------------------
+        --------------------------------Message----------------------------------------------
+        --------------------------------------------------------------------------- -->
+        <div class="message sa sa--up">
+            <div class="fluid"></div>
+            <p>こんにちは。<br>
+            こちらは、日下佳祐のポートフォリオサイトです。<br class="unable-br">
+            できるだけ、自分の世界観を表現してみました。<br class="unable-br">
+            ヘッダーにあるスピーカーのボタンを押すと、<br class="unable-br">
+            BGMが流れますので音量等ご注意ください。</p>
+        </div>
+
+
+        <!-- ---------------------------------------------------------------------------
+        --------------------------------works----------------------------------------------
+        --------------------------------------------------------------------------- -->
+
+        <span id="link-works" class="link-t-a"></span>
+        <h2 class="section-title wider-space">Works</h2>
+        <section id="works">
+
+            <!-- ウェブデザイン -->
+            <h3 class="detail-title">Webデザイン / コーディング</h3>
+            <div class="works-flex">
+                <div class="works-item openModal">
+                    <div class="works-image-box"><img src="images/hinoshita-tosou.jpg" alt="ひのした塗装のスクリーンショット" loading="lazy"></div>
+                    <p class="works-title">ひのした塗装</p>
+                    <p class="works-cat">Design / Coding</p>
+                </div>
+                <div class="works-item openModal">
+                    <div class="works-image-box"><img src="images/w-thumbnail-2.jpg" alt="sks運送のスクリーンショット" loading="lazy"></div>
+                    <p class="works-title">SKS運送（架空サイト）</p>
+                    <p class="works-cat">Design</p>
+                </div>
+                <div class="works-item openModal">
+                    <div class="works-image-box"><img src="images/w-thumbnail-3.jpg" alt="ひのした保育園のスクリーンショット" loading="lazy"></div>
+                    <p class="works-title">ひのした保育園（架空サイト）</p>
+                    <p class="works-cat">Design</p>
+                </div>
+                <div class="works-item openModal">
+                    <div class="works-image-box"><img src="images/w-thumbnail-4.jpg" alt="英会話スクールサイトのスクリーンショット" loading="lazy"></div>
+                    <p class="works-title">英会話スクールサイト</p>
+                    <p class="works-cat">Coding練習</p>
+                </div>
+                <div class="works-item openModal">
+                    <div class="works-image-box"><img src="images/w-thumbnail-5.jpg" alt="靴のメディアサイトののスクリーンショット" loading="lazy"></div>
+                    <p class="works-title">スニーカーのメディアサイト</p>
+                    <p class="works-cat">Coding練習</p>
+                </div>
+                <div class="works-item openModal">
+                    <div class="works-image-box"><img src="images/w-thumbnail-6.jpg" alt="カフェサイトのスクリーンショット" loading="lazy"></div>
+                    <p class="works-title">Cafeサイト（パララックス）</p>
+                    <p class="works-cat">Coding練習</p>
+                </div>
+                <div class="works-item openModal">
+                    <div class="works-image-box"><img src="images/furniture-design-min2.jpg" alt="家具のストアサイトのスクリーンショット" loading="lazy"></div>
+                    <p class="works-title">家具のストアサイト</p>
+                    <p class="works-cat">Coding練習</p>
+                </div>
+                <div class="works-item openModal">
+                    <div class="works-image-box"><img src="images/w-thumbnail-8.jpg" alt="和菓子店サイトのスクリーンショット" loading="lazy"></div>
+                    <p class="works-title">和菓子店サイト</p>
+                    <p class="works-cat">Coding練習</p>
+                </div>
+                <div class="works-item openModal">
+                    <div class="works-image-box"><img src="images/w-thumbnail-9.jpg" alt="旅ブログサイトのスクリーンショット" loading="lazy"></div>
+                    <p class="works-title">旅ブログサイト</p>
+                    <p class="works-cat">Coding練習</p>
+                </div>
+            </div>
+
+            <!-- バナーデザイン -->
+            <h3 class="detail-title">バナーデザイン</h3>
+            <div class="works-flex">
+                <div class="works-item openModal2">
+                    <div class="works-image-box centering"><img src="images/gym-banner-thumbnail.jpg" alt="パーソナルジムのサイトトップバナー広告の画像" loading="lazy"></div>
+                    <p class="works-title">パーソナルジムサイトバナー広告</p>
+                    <p class="works-cat">Banner-ad-Design</p>
+                </div>
+                <div class="works-item openModal2">
+                    <div class="works-image-box centering"><img src="images/bike_banner.jpg" alt="自転車バナー広告の画像" loading="lazy"></div>
+                    <p class="works-title">自転車セールバナー広告</p>
+                    <p class="works-cat">Banner-ad-Design</p>
+                </div>
+                <div class="works-item openModal2">
+                    <div class="works-image-box centering"><img src="images/sea-weed-banner3.jpg" alt="海苔メーカーLINE勧誘バナー広告の画像" loading="lazy"></div>
+                    <p class="works-title">海苔メーカーLINE勧誘バナー広告</p>
+                    <p class="works-cat">Banner-ad-Design</p>
+                </div>
+                <div class="works-item openModal2">
+                    <div class="works-image-box centering"><img src="images/programming-banner.jpg" alt="プログラミング教室バナー広告の画像" loading="lazy"></div>
+                    <p class="works-title">プログラミング教室バナー広告</p>
+                    <p class="works-cat">Banner-ad-Design</p>
+                </div>
+                <div class="works-item openModal2">
+                    <div class="works-image-box centering"><img src="images/outer-banner.png" alt="子供服のサイト内バナー広告の画像" loading="lazy"></div>
+                    <p class="works-title">子供服バナー広告</p>
+                    <p class="works-cat">Banner-ad-Design</p>
+                </div>
+                <div class="works-item openModal2">
+                    <div class="works-image-box centering"><img src="images/chocolate_banner2.jpg" alt="チョコのバナー広告の画像" loading="lazy"></div>
+                    <p class="works-title">製菓メーカーバナー広告</p>
+                    <p class="works-cat">Banner-ad-Design</p>
+                </div>
+            </div>
+
+            <!-- ロゴデザイン -->
+            <h3 class="detail-title">ロゴデザイン</h3>
+            <div class="works-flex">
+                <div class="works-item openModal3">
+                    <div class="works-image-box centering"><img src="images/logo-2-min2.jpg" alt="リフォーム会社のロゴ画像" loading="lazy"></div>
+                    <p class="works-title">リフォーム会社 -vintage base-</p>
+                    <p class="works-cat">Logo-Design</p>
+                </div>
+                <div class="works-item openModal3">
+                    <div class="works-image-box centering"><img src="images/logo-3-min.jpg" alt="学習塾のロゴ画像" loading="lazy"></div>
+                    <p class="works-title">学習塾-STUDY UP-</p>
+                    <p class="works-cat">Logo-Design</p>
+                </div>
+                <div class="works-item openModal3">
+                    <div class="works-image-box centering"><img src="images/logo-4-min2.jpg" alt="やました小児科のロゴ画像" loading="lazy"></div>
+                    <p class="works-title">やました小児科</p>
+                    <p class="works-cat">Logo-Design</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ---------------------------------------------------------------------------
+        --------------------------------about----------------------------------------------
+        --------------------------------------------------------------------------- -->
+        <span id="link-about" class="link-t-a"></span>
+        <h2 class="section-title a-section-title">About</h2>
+        <section id="about">
+            <div class="bird"></div>
+            <div class="bird -type_2"></div>
+            <div class="bird -type_3"></div>
+            <!-- プロフィール -->
+            <h3 class="sub-title">Profile</h3>
+            <p class="greeting"><span>は</span>じめまして。くさかけいすけと申します。
+
+            </p>
+            <div class="about-flex">
+                <div class="a-flex-left">
+                    <div class="image-box">
+                        <img src="images/my-image-1.jpg" alt="顔写真です" loading="lazy">
+                    </div>
+                    <p class="image-desc">ワイルド時代の自分。今はみるかげもなくおとなしい感じになっています。</p>
+                    <div class="image-box">
+                        <img src="images/my-image-2.jpg" alt="植樹している自分" loading="lazy">
+                    </div>
+                    <p class="image-desc">栗の木を植樹する自分。カナダにて。</p>
+                </div>
+                <div class="a-flex-right">
+                    <dl class="profile-flex">
+                        <dt>氏名</dt>
+                        <dd>日下 佳祐</dd>
+                    </dl>
+                    <dl class="profile-flex">
+                        <dt>経歴</dt>
+                        <dd class="date">2009年3月</dd>
+                        <dd class="event">香川県立高松東高等学校 卒業</dd>
+                        <dt></dt>
+                        <dd class="date">2009年4月</dd>
+                        <dd class="event">某ラフティング会社 入社</dd>
+                        <dt></dt>
+                        <dd class="date">2013年10月</dd>
+                        <dd class="event">某ラフティング会社 退社</dd>
+                        <dt></dt>
+                        <dd class="date">2014年4月</dd>
+                        <dd class="event">某林業会社 入社</dd>
+                        <dt></dt>
+                        <dd class="date">2020年5月</dd>
+                        <dd class="event">某林業会社 退社</dd>
+                        <dt></dt>
+                        <dd class="date">2021年2月</dd>
+                        <dd class="event">職業訓練校 WEBデザインコース 入校</dd>
+                        <dt></dt>
+                        <dd class="date">2021年5月</dd>
+                        <dd class="event">職業訓練校 WEBデザインコース 卒業</dd>
+                    </dl>
+                    <dl class="profile-flex">
+                        <dt>資格</dt>
+                        <dd class="qualification">Webクリエイター能力認定試験（エキスパート）</dd>
+                        <dt></dt>
+                        <dd class="qualification">Photoshop®クリエイター能力試験（スタンダード）</dd>
+                        <dt></dt>
+                        <dd class="qualification">Illustrator®クリエイター能力認定試験（スタンダード）</dd>
+                        <dt></dt>
+                        <dd class="qualification">Excel表計算処理技能認定試験（3級）</dd>
+                        <dt></dt>
+                        <dd class="qualification">チェンソー労働安全衛生特別教育修了</dd>
+                        <dt></dt>
+                        <dd class="qualification">普通自動車運転免許</dd>
+                    </dl>
+                    <div class="ac-flex">
+                        <p class="ac-title">趣味</p>
+                        <ul class="ac-box">
+                            <li class="ac-menu click-here">海外旅行・旅</li>
+                            <li class="ac-content">
+                                <span class="marker-yellow"> 今までに5カ国ほど旅をしました。どこに行っても怪我して帰ってきます、、。</span><br>
+                                <span class="bold">これまでの旅行先：</span> グアム、オーストラリア、インドネシア、中国、ネパール、カナダ
+                            </li>
+                            <li class="ac-menu">音楽</li>
+                            <li class="ac-content">
+                                <span class="marker-yellow"> 嗜む程度にギターを弾きます。</span><br>トップページのBGMは自分で作りました。波の音は、浦生海岸で録音。ギターの音、波の音、映像を合成しました。
+                            </li>
+                            <li class="ac-menu">英会話</li>
+                            <li class="ac-content">
+                                <span class="marker-yellow">日常英会話は喋れます。</span><br>外国人とコミュニケーションをとって新しい文化や考えを知ることが好きです。旅先ではゲストハウスに泊まりがちです。
+                            </li>
+                            <li class="ac-menu">写真（観る方）</li>
+                            <li class="ac-content">
+                                <span class="marker-yellow">星野道夫が大好きです。</span><br>星野道夫に憧れてカナダを訪れました。最近は友人がカメラを貸してくれているので、撮る方にも挑戦しています。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- スキル -->
+            <h3 class="sub-title">Skill</h3>
+            <div class="skill-flex">
+
+                <!-- html -->
+                <div class="skill-item">
+                    <div class="s-item-image-box">
+                        <img src="images/html-logo.png" alt="htmlのlogo" loading="lazy">
+                    </div>
+                    <div class="s-item-text">
+                        <p class="s-item-title">HTML5＆CSS3</p>
+                        <img src="images/four-stars-icon.png" alt="四つ星アイコン" class="star" loading="lazy">
+                        <p class="s-item-detail">基本的なコーディング、レスポンシブ対応ができます。普段使い慣れているエディタは
+                            VisualStudioCodeです。他のエディタも数日使えば慣れると思います。</p>
+                    </div>
+                </div>
+
+                <!-- js -->
+                <div class="skill-item">
+                    <div class="s-item-image-box">
+                        <img src="images/js-logo.png" alt="JSのlogo" loading="lazy">
+                    </div>
+                    <div class="s-item-text">
+                        <p class="s-item-title">JavaScript</p>
+                        <img src="images/three-stars-icon.png" alt="三つ星アイコン" class="star" loading="lazy">
+                        <p class="s-item-detail">あまり複雑なコードをスクラッチから書くことはできませんが、ライブラリの実装や基本的なコード（jQuery）は調べながらになりますが書けます。</p>
+                    </div>
+                </div>
+
+                <!-- illustrator -->
+                <div class="skill-item">
+                    <div class="s-item-image-box">
+                        <img src="images/illustrator-logo1.png" alt="illustratorのlogo" loading="lazy">
+                    </div>
+                    <div class="s-item-text">
+                        <p class="s-item-title">Illustrator</p>
+                        <img src="images/three-stars-icon.png" alt="三つ星アイコン" class="star" loading="lazy">
+                        <p class="s-item-detail">基本機能は問題なく使えます。Photoshopよりも好きです。ロゴ作成時に使用します。
+                        <br>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- photoshop -->
+                <div class="skill-item">
+                    <div class="s-item-image-box">
+                        <img src="images/photoshop-logo11.png" alt="Photoshopのlogo" loading="lazy">
+                    </div>
+                    <div class="s-item-text">
+                        <p class="s-item-title">Photoshop</p>
+                        <img src="images/three-stars-icon.png" alt="三つ星アイコン" class="star" loading="lazy">
+                        <p class="s-item-detail">基本機能は問題なく使えます。サイトデザイン制作で使用しています。</p>
+                    </div>
+                </div>
+
+                <!-- xd -->
+                <div class="skill-item">
+                    <div class="s-item-image-box">
+                        <img src="images/xd-logo11.png" alt="XDのlogo" loading="lazy">
+                    </div>
+                    <div class="s-item-text">
+                        <p class="s-item-title">Adobe XD</p>
+                        <img src="images/four-stars-icon.png" alt="四つ星アイコン" class="star" loading="lazy">
+                        <p class="s-item-detail">基本機能は問題なく使えます。デザインソフトの中で一番好きです。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ---------------------------------------------------------------------------
+        --------------------------------contact----------------------------------------------
+        --------------------------------------------------------------------------- -->
+        <span id="link-contact" class="link-t-a"></span>
+        <h2 class="section-title c-section-title">Contact</h2>
+        <section id="contact">
+            <p class="contact-text">
+                お忙しい中、私のポートフォリオをご覧いただきありがとうございました＾＾。<br>
+                もし、御用がありましたらこちらからご連絡よろしくお願い致します。
+            </p>
+            <div class="demo_stage">
+                <div class="demo_wrap" data-order="left">
+                <a href="mailto:keisuke19901215@gmail.com" class="demo_item anime"></a>
+                </div>
+            </div>
+        </section>
+
+
+         <!-- ---------------------------------------------------------------------------
+        --------------------------------footer----------------------------------------------
+        --------------------------------------------------------------------------- -->
+        <footer id="footer">
+            <!-- <canvas id="waveCanvas"></canvas> -->
+            <small>&copy;2021 Keisuke Kusaka All Rights Reserved.</small>
+        </footer>
+
+        <!-- ---------------------------------------------------------------------------
+        --------------------------------モーダルウィンドウ（ポップアップ）----------------------------------------------
+        --------------------------------------------------------------------------- -->
+
+        <!-- webデザイン＆コーディングのモーダルウィンドウ -->
+
+        <section class="modalArea">
+            <div class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <img src="images/hinoshita-tosou.jpg" alt="hinoshita-tosouのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>webデザイン/コーディング</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Adobe XD / Photoshop / Illustrator / VS cord</dd>
+                        <dt>製作期間</dt>
+                        <dd>3日</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>ターゲット/ペルソナ</dt>
+                        <dd>30代で買った新築の家の壁が、新潟の過酷な風や塩害にやられ色褪せが気になりはじめた40〜50代の主婦</dd>
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・セクションタイトルの文字を職人が塗っている風に人物をくり抜いて配置しました。</dd>
+                        <dt></dt>
+                        <dd>・余白を多めにとり読みやすくなるように心掛けました。</dd>
+                        <dt></dt>
+                        <dd class="with-ps">・笑顔の多い写真を使い強面な職人さんを親しみやすい印象にしました。</dd>
+                        <dt></dt>
+                        <dd class="ps">「※提供された素材は公開不可でしたので、公開可能なもの流用しています」</dd>
+                        <dt>反省点</dt>
+                        <dd>・hover時のアニメーションのレパートリーの少なさに気付いた。</dd>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                </div>
+            </div>
+            <a href="link/link-tosou/index.html" target="_blank" class="link">-Link-</a>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea">
+            <div class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <img src="images/sks-tranceport-min2.jpg" alt="SKS tranceportationのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>webデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Photoshop</dd>
+                        <dt>製作期間</dt>
+                        <dd>半日</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>ターゲット/ペルソナ</dt>
+                        <dd>地元の多少融通が効く運送会社を探している企業さん</dd>
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・実際に従兄弟の経営している会社を想像して、デザインしました。</dd>
+                        <dt></dt>
+                        <dd>・メインカラーにブルーを使用して信頼感を与える印象にしました。</dd>
+                        <dt>反省点</dt>
+                        <dd>・メインコンテンツ部のレイアウトに時間が掛かってしまった。多様なウェブサイトを見て、レパートリーを増やしたい。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea">
+            <div class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <img src="images/hinoshita-hoikuenn-min.jpg" alt="hinoshita-hoikuenのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>webデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Photoshop</dd>
+                        <dt>製作期間</dt>
+                        <dd>７時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>ターゲット/ペルソナ</dt>
+                        <dd>子供にとってより良い環境での保育園生活を望み、自宅近くの保育園以外に選択肢があるかとインターネットで検索する20〜30代母親</dd>
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・手書き風フォントを使用し、親しみやすい、子供っぽい、楽しい印象にしました。（本文・秀英丸ゴシック / 見出し・AB-babywalk）</dd>
+                        <dt></dt>
+                        <dd>・全体的に丸みを帯びたデザインにし、柔らかで優しい印象にしました。</dd>
+                        <dt>反省点</dt>
+                        <dd>・少し装飾が少なく感じたので、増やした方が良いと思う。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea">
+            <div class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <img src="images/language-school-site-min2.jpg" alt="language-school-siteのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>コーディング練習（xdファイルからコーディング）</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Adobe XD / VS cord</dd>
+                        <dt>製作期間</dt>
+                        <dd>２日</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・初めてスライドショー、cssアニメーション、inview.jsを使っての実装をしました。調べながらで時間がかかってしまったが、勉強になりました。実際に動いた時は感動しました。</dd>
+                        <dt></dt>
+                        <dd></dd>
+                    </dl>
+                </div>
+            </div>
+            <a href="link/link-english-school/index.html" target="_blank" class="link">-Link-</a>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea">
+            <div class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <img src="images/sneakers-min2.jpg" alt="メディアサイトのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>コーディング練習（xdファイルからコーディング）</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Adobe XD / VS cord</dd>
+                        <dt>製作期間</dt>
+                        <dd>２日</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・初めてslick.jsを実装しました。</dd>
+                        <dt>反省点</dt>
+                        <dd>・動画、スライドショー、inview.jsとアニメーションが多いので、サイトが重くなってしまった。動画を２種類（mp４とwebm）を用意、画像ファイルを圧縮したら多少軽くなった。動画、画像容量の最大値の基準をもつべきだと思った。
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <a href="link/link-sneaker/index.html" target="_blank" class="link">-Link-</a>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea">
+            <div class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <img src="images/cafesite-min.jpg" alt="カフェサイトのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>コーディング練習（xdファイルからコーディング）</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Adobe XD / VS cord</dd>
+                        <dt>製作期間</dt>
+                        <dd>６時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・初めて簡単なパララックスを実装しました。</dd>
+                        <dt></dt>
+                        <dd>・新しく覚えたcssプロパティ（background-attach:fixed; / filter:drop-shadow / filter:grayscale; / scrool-behavior:smooth; ）
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <a href="link/link-cafe/index.html" target="_blank" class="link">-Link-</a>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea">
+            <div class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <img src="images/furniture-design-min2.jpg" alt="家具サイトのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>コーディング練習（xdファイルからコーディング）</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Adobe XD / VS cord</dd>
+                        <dt>製作期間</dt>
+                        <dd>２日</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・新しく覚えたcssプロパティ（pointer-events:none / z-indexが理解できた。 ）
+                        <dt>反省点</dt>
+                        <dd>・多ページに遷移するサイトだったので、特定のページだけにjQueryを書く必要があり、少し時間がかかってしまった。</dd>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <a href="link/link-store/top.html" target="_blank" class="link">-Link-</a>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea">
+            <div class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <img src="images/wagashi-site-min2.jpg" alt="和菓子サイトのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>コーディング練習（xdファイルからコーディング）</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Adobe XD / VS cord</dd>
+                        <dt>製作期間</dt>
+                        <dd>４時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・初めて縦書きの実装をしました。</dd>
+                        <dt></dt>
+                        <dd>・新しく覚えたcssプロパティ（display:flex;を使っての天地中央揃え / writing-mode:vertical-rl ）
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <a href="link/link-japanese-sweets/index.html" target="_blank" class="link">-Link-</a>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea">
+            <div class="modalBg"></div>
+            <div class="modalWrapper">
+                <div class="modalContents">
+                    <img src="images/travel-blog-min2.jpg" alt="旅ブログサイトのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>コーディング練習（xdファイルからコーディング）</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Adobe XD / VS cord</dd>
+                        <dt>製作期間</dt>
+                        <dd>5時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・cssで三角形を作りました</dd>
+                        <dt></dt>
+                        <dd>・line-hightの計算方法が解りました。</dd>
+                    </dl>
+                </div>
+            </div>
+            <a href="link/link-travel/index.html" target="_blank" class="link">-Link-</a>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <!-- バナーデザインのモーダルウィンドウ -->
+
+        <section class="modalArea2">
+            <div class="modalBg"></div>
+            <div class="modalWrapper2">
+                <div class="modalContents2">
+                    <img src="images/gym-banner.jpg" alt="パーソナルジムバナーのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box2">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>バナーデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Photoshop</dd>
+                        <dt>製作期間</dt>
+                        <dd>5時間</dd>
+                        <dt>ターゲット/ペルソナ</dt>
+                        <dd>今まで様々なダイエットに手を出し、ことごとく失敗してきた30代OL</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・キャッチコピーも考えました。真剣に取り組まないといけない印象にしたかったので情熱を表すオレンジと黄色のグラデーションを背景にしました。</dd>
+                        <dt>反省点・気づき</dt>
+                        <dd>・文字加工のバリエーションが少ないので、増やしたい。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+        <section class="modalArea2">
+            <div class="modalBg"></div>
+            <div class="modalWrapper2">
+                <div class="modalContents2">
+                    <img src="images/bike_banner.jpg" alt="自転車バナーのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box2">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>バナーデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Photoshop / Illustrator</dd>
+                        <dt>製作期間</dt>
+                        <dd>３時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・セール告知バナーなのであえてあまり余白を取らず、とにかく目立つようにデザインしました。
+                        </dd>
+                        <dt></dt>
+                        <dd>・単調にならないように自転車をあえてはみ出させて、視線が集まりやすくなるようにしています。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+        <section class="modalArea2">
+            <div class="modalBg"></div>
+            <div class="modalWrapper2">
+                <div class="modalContents2">
+                    <img src="images/sea-weed-banner3.jpg" alt="バナー１のアップ画像" loading="lazy">
+                </div>
+                <div class="description-box2">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>バナーデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Photoshop</dd>
+                        <dt>製作期間</dt>
+                        <dd>５時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・海苔自体を背景にすることで、商品を分かりやすくしました。</dd>
+                        <dt></dt>
+                        <dd>・キャッチコピーにオレンジの下線を引いて、目立つようにしました。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+        <section class="modalArea2">
+            <div class="modalBg"></div>
+            <div class="modalWrapper2">
+                <div class="modalContents2">
+                    <img src="images/programming-banner.jpg" alt="プログラミングバナーのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box2">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>バナーデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Photoshop</dd>
+                        <dt>製作期間</dt>
+                        <dd>2時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・『Googole』の文字を本家と同じカラーにして認識しやすくし、キャッチコピーに半透明の下敷きを置き視認性を高めています。</dd>
+                        <dt></dt>
+                        <dd>・プログラミングのイメージから、マトリックス風の背景にしました。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+        <section class="modalArea2">
+            <div class="modalBg"></div>
+            <div class="modalWrapper2">
+                <div class="modalContents2">
+                    <img src="images/outer-banner.png" alt="バナー0のアップ画像" loading="lazy">
+                </div>
+                <div class="description-box2">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>バナーデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Photoshop</dd>
+                        <dt>製作期間</dt>
+                        <dd>1時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・『スタイリッシュでお洒落な子供服』をコンセプトに作成しました。</dd>
+                        <dt></dt>
+                        <dd>・高級感があり、尚且つ大人っぽい印象にしたかったので、装飾を少なめに。フォントはサンセリフ体を使用しました。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+        <section class="modalArea2">
+            <div class="modalBg"></div>
+            <div class="modalWrapper2">
+                <div class="modalContents2">
+                    <img src="images/choko_banner.jpg" alt="チョコのバナーのアップ画像" loading="lazy">
+                </div>
+                <div class="description-box2">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>バナーデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Photoshop</dd>
+                        <dt>製作期間</dt>
+                        <dd>２時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・『冬、チョコ』のキーワードからメルティ◯スのイメージがあったので、レイアウトを参考にチョコを真ん中に配置しました。</dd>
+                        <dt></dt>
+                        <dd>・背景を雪原風にして、冬を表現しました。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <!-- ロゴ用モーダルウィンドウ -->
+
+        <section class="modalArea3">
+            <div class="modalBg"></div>
+            <div class="modalWrapper3">
+                <div class="modalContents3">
+                    <img src="images/logo-2-min2.jpg" alt="ロゴ２のアップ画像" loading="lazy">
+                </div>
+                <div class="description-box3">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>ロゴデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Illustrator</dd>
+                        <dt>製作期間</dt>
+                        <dd>６時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・北浜アリーでもらったショップカードのデザインが好きで、そのデザインを参考にデザインしました。</dd>
+                        <dt></dt>
+                        <dd>・「古き物に新しい光を灯す」をデザインコンセプトにし、全体的にビンテージ感を出しました。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea3">
+            <div class="modalBg"></div>
+            <div class="modalWrapper3">
+                <div class="modalContents3">
+                    <img src="images/logo-3-min.jpg" alt="ロゴ3のアップ画像" loading="lazy">
+                </div>
+                <div class="description-box3">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>ロゴデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Illustrator</dd>
+                        <dt>製作期間</dt>
+                        <dd>４時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・子供が好奇心のままに学びを得るイメージでデザインしました。</dd>
+                        <dt></dt>
+                        <dd>・study upという土台が子供の能力を底上げするイメージで、UPの文字を浮き上がらせました。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+
+
+        <section class="modalArea3">
+            <div class="modalBg"></div>
+            <div class="modalWrapper3">
+                <div class="modalContents3">
+                    <img src="images/logo-4-min2.jpg" alt="ロゴ4のアップ画像" loading="lazy">
+                </div>
+                <div class="description-box3">
+                    <dl class="d-box-list-left">
+                        <dt>製作範囲</dt>
+                        <dd>ロゴデザイン</dd>
+                        <dt>使用ソフト</dt>
+                        <dd>Illustrator</dd>
+                        <dt>製作期間</dt>
+                        <dd>２時間</dd>
+                    </dl>
+                    <dl class="d-box-list-right">
+                        <dt>工夫した所・学んだ点</dt>
+                        <dd>・初めて作ったロゴです。</dd>
+                        <dt></dt>
+                        <dd>・亀を使ったロゴを希望されていたので、海亀を使用しました。</dd>
+                        <dt></dt>
+                        <dd>・医療のシンボルである十字マークを甲羅の上に乗せて、医療機関であることを認識しやすくデザインしました。</dd>
+                        <dt></dt>
+                        <dd>・甲羅のシルエットをハートマークにして、愛される優しい小児科をイメージしました。</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="closeModal">×</div>
+        </section>
+    </main>
+
+
+   
+
+
+
+    <!-- jquery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- vivus.js読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+    <!-- 自作js読み込み -->
+    <script src="js/script.js"></script>
+</body>
+</html>
